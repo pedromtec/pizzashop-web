@@ -22,7 +22,7 @@ export function ErrorPage() {
   console.error(error)
 
   if (isRouteErrorResponse(error)) {
-    return <ErrorNote message={error.statusText} />
+    return <ErrorNote message={error.data} />
   }
 
   if (error instanceof Error) {
